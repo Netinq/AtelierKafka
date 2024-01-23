@@ -13,4 +13,4 @@ while True:
   
   for index, row in df.iterrows():
     print(f"Sending {row['ident']} vélos disponibles {row['nbvelos']}")
-    producer.send('velib', row['ident'].encode('utf-8'), row['ident'].encode('utf-8'))
+    producer.send('velib', row['nbvelos'].encode('utf-8'), row['ident'].encode('utf-8'))
